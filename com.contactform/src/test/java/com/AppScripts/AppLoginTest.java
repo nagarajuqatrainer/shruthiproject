@@ -6,10 +6,18 @@ package com.AppScripts;
 
 import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
+
+import java.util.Iterator;
+import java.util.Set;
+import java.util.concurrent.TimeUnit;
+
 import org.apache.log4j.Logger;
 
 import com.App.PageObjects.AppLogin;
@@ -51,22 +59,52 @@ public class AppLoginTest extends ConfigReader
     public void verifyLogin() throws Exception    {
     	
     	PropertyConfigurator.configure("./myfiles/log4j.properties");
+    	WebDriverWait wait = new WebDriverWait(driver,10);
     	
     	
     	driver =BrowserFactory.getBrowser(appreader.getBrowsername(),appreader.getAppurl());
     	test.log(LogStatus.PASS, "Launching browser");
+    	
+    	String MainWindow=driver.getWindowHandle();
+    	Set<String> s1 = driver.getWindowHandles();
+		Iterator<String> v1 = s1.iterator();
+		while(v1.hasNext()){
+			String Childwindow=v1.next();
+			if(MainWindow.equalsIgnoreCase(Childwindow)){
+				driver.switchTo().window(Childwindow);
+			}
+				
+		}
+		
+		
+		driver.switchTo().window(MainWindow);
+		
+    	
     	
     	String screenshotpath = ScreenCapture.captureScreenshot(driver, "Test1");
 		String image=test.addScreenCapture(screenshotpath);
     	
     	AppLogin loginpage = PageFactory.initElements(driver, AppLogin.class);
     	loginpage.verifyLogin(appreader.getUsername(), appreader.getPassword());
+    	wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.name("user")));
+    	
+    	Alert alert = driver.switchTo().alert();
+    	
+    	
+    	
+    	
+    	
     	test.log(LogStatus.INFO, "verifyUsername"+"\t"+"verifyPassword");
     	test.log(LogStatus.INFO,image);
     	
-    	Alert alert = driver.switchTo().alert();
-    	alert.accept();
-    	alert.dismiss();
+    	
+    	//Waiting methods
+    	//Implicity wait //Explicity wait // fluent wait
+    	
+    	driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+    	
+    	
+    	
     	
     	System.out.println("verify user name"+"\t"+"verify Password");
     	logger.info("verify user name"+"\t"+"verify Password");
