@@ -20,3 +20,9 @@
 2020-09-05 08:35:57,502 - com.AppScripts.AppLoginTest -INFO - verify user name	verify Password
 2020-09-05 08:36:04,136 - com.AppScripts.AppLoginTest -INFO - clicking button
 2020-09-05 08:36:11,006 - com.AppScripts.AppLoginTest -INFO - Closing Browser
+2020-09-07 09:05:37,207 - com.AppScripts.AppLoginTest -INFO - verify user name	verify Password
+2020-09-07 09:05:39,174 - com.AppScripts.AppLoginTest -INFO - clicking button
+2020-09-07 09:05:40,518 - com.AppScripts.AppLoginTest -INFO - Closing Browser
+2020-09-07 09:13:19,458 - com.AppScripts.AppLoginTest -INFO - verify user name	verify Password
+2020-09-07 09:13:21,042 - com.AppScripts.AppLoginTest -INFO - clicking button
+2020-09-07 09:13:21,893 - com.AppScripts.AppLoginTest -INFO - Closing Browser

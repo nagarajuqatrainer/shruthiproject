@@ -17,7 +17,7 @@ public WebDriver driver;
 	@FindBy(name="btnSubmit")WebElement button;
 	
 	
-	WebDriverWait wait = new WebDriverWait(driver,10);
+	
 	
 	public AppLogin(WebDriver driver) {
 		this.driver=driver;
@@ -27,7 +27,7 @@ public WebDriver driver;
 	public void verifyLogin(String un,String pw) {
 		
 		if(username.isEnabled()) {
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@name='user']")));
+		
 			username.sendKeys(un);
 			
 		}
