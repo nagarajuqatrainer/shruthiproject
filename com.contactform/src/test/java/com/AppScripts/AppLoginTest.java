@@ -5,6 +5,7 @@ package com.AppScripts;
 
 
 import org.apache.log4j.PropertyConfigurator;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.BeforeSuite;
@@ -62,6 +63,9 @@ public class AppLoginTest extends ConfigReader
     	loginpage.verifyLogin(appreader.getUsername(), appreader.getPassword());
     	test.log(LogStatus.INFO, "verifyUsername"+"\t"+"verifyPassword");
     	test.log(LogStatus.INFO,image);
+    	
+    	Alert alert = driver.switchTo().alert();
+    	alert.accept();
     	
     	System.out.println("verify user name"+"\t"+"verify Password");
     	logger.info("verify user name"+"\t"+"verify Password");
