@@ -66,6 +66,7 @@ public class AppLoginTest extends ConfigReader
     	
     	Alert alert = driver.switchTo().alert();
     	alert.accept();
+    	alert.dismiss();
     	
     	System.out.println("verify user name"+"\t"+"verify Password");
     	logger.info("verify user name"+"\t"+"verify Password");
