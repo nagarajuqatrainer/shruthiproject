@@ -1,0 +1,22 @@
+2020-09-05 07:29:23,104 [main] INFO com.AppScripts.AppLoginTest - verify user name	verify Password
+2020-09-05 07:39:39,268 [main] INFO com.AppScripts.AppLoginTest - verify user name	verify Password
+2020-09-05 07:39:42,502 [main] INFO com.AppScripts.AppLoginTest - clicking button
+2020-09-05 07:39:43,569 [main] INFO com.AppScripts.AppLoginTest - Closing Browser
+2020-09-05 07:44:23,034 [main] INFO com.AppScripts.AppLoginTest - verify user name	verify Password
+2020-09-05 07:44:32,093 [main] INFO com.AppScripts.AppLoginTest - clicking button
+2020-09-05 07:44:34,999 [main] INFO com.AppScripts.AppLoginTest - Closing Browser
+2020-09-05 07:47:22,554 [main] INFO com.AppScripts.AppLoginTest - verify user name	verify Password
+2020-09-05 07:47:24,425 [main] INFO com.AppScripts.AppLoginTest - clicking button
+2020-09-05 07:47:25,665 [main] INFO com.AppScripts.AppLoginTest - Closing Browser
+2020-09-05 07:52:00,323 [main] INFO com.AppScripts.AppLoginTest - verify user name	verify Password
+2020-09-05 07:52:06,182 [main] INFO com.AppScripts.AppLoginTest - clicking button
+2020-09-05 07:52:07,280 [main] INFO com.AppScripts.AppLoginTest - Closing Browser
+2020-09-05 08:20:56,558 [main] INFO com.AppScripts.AppLoginTest - verify user name	verify Password
+2020-09-05 08:20:58,923 [main] INFO com.AppScripts.AppLoginTest - clicking button
+2020-09-05 08:21:00,250 [main] INFO com.AppScripts.AppLoginTest - Closing Browser
+2020-09-05 08:21:51,888 [main] INFO com.AppScripts.AppLoginTest - verify user name	verify Password
+2020-09-05 08:21:54,118 [main] INFO com.AppScripts.AppLoginTest - clicking button
+2020-09-05 08:21:55,567 [main] INFO com.AppScripts.AppLoginTest - Closing Browser
+2020-09-05 08:35:57,502 [main] INFO com.AppScripts.AppLoginTest - verify user name	verify Password
+2020-09-05 08:36:04,136 [main] INFO com.AppScripts.AppLoginTest - clicking button
+2020-09-05 08:36:11,006 [main] INFO com.AppScripts.AppLoginTest - Closing Browser
