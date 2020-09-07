@@ -59,25 +59,11 @@ public class AppLoginTest extends ConfigReader
     public void verifyLogin() throws Exception    {
     	
     	PropertyConfigurator.configure("./myfiles/log4j.properties");
-    	WebDriverWait wait = new WebDriverWait(driver,10);
-    	
     	
     	driver =BrowserFactory.getBrowser(appreader.getBrowsername(),appreader.getAppurl());
     	test.log(LogStatus.PASS, "Launching browser");
     	
-    	String MainWindow=driver.getWindowHandle();
-    	Set<String> s1 = driver.getWindowHandles();
-		Iterator<String> v1 = s1.iterator();
-		while(v1.hasNext()){
-			String Childwindow=v1.next();
-			if(MainWindow.equalsIgnoreCase(Childwindow)){
-				driver.switchTo().window(Childwindow);
-			}
-				
-		}
-		
-		
-		driver.switchTo().window(MainWindow);
+    	
 		
     	
     	
@@ -86,9 +72,9 @@ public class AppLoginTest extends ConfigReader
     	
     	AppLogin loginpage = PageFactory.initElements(driver, AppLogin.class);
     	loginpage.verifyLogin(appreader.getUsername(), appreader.getPassword());
-    	wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.name("user")));
     	
-    	Alert alert = driver.switchTo().alert();
+    	
+    	
     	
     	
     	
